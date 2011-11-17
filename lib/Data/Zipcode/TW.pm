@@ -1,4 +1,6 @@
 package Data::Zipcode::TW;
+# ABSTRACT: Taiwan zipcode data in a box.
+
 use strict;
 
 ## cd doc; perl twzip.pl
@@ -1115,6 +1117,10 @@ sub get {
 __END__
 
 =encoding utf8
+
+=head1 NAME
+
+Data::Zipcode::TW
 
 =head1 SYNOPSIS
 
