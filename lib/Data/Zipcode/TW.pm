@@ -1150,21 +1150,66 @@ from L<http://www.post.gov.tw/post/internet/down/index.html?ID=190108>.
 This method takes a simple, non-ref scalar (String or Number) and returns a simple
 scalar (String or Number) or undef.
 
-The C<get> method is the only method for the class (and object), it requires one argument,
-that is the query string. A query string can be a number, in which case it performs
-a reverse lookup (a zipcode-to-area-name lookup). Or it can be a short area name, or long
-area name.
+This method is the only method for the class and the instances of the class, it
+requires one argument, that is the query string.
 
-Please consult this table L<http://download.post.gov.tw/post/download/臺灣地區郵遞區號前3碼一覽表_9912.txt>
-for area names.
+When the query string is a number, it performs a reverse lookup (a
+zipcode-to-area-name lookup), and returns a long area name. Otherwise it is
+assumed the string means a long or short area name (described below), and returns
+the zipcode number.
+
+Please reference this official table provided by the postal office website at
+ L<http://download.post.gov.tw/post/download/臺灣地區郵遞區號前3碼一覽表_9912.txt>
+for the area names that can be used in the query string.
 
 Short names are those with zipcode numbers in the table, they are usually town
 names. Long names are short names prepened by their city/county names. For
-example, C<大安區> is a short name, while C<臺北市大安區> is a long name. Notice
-there are two C<大安區> in the table, one with zipcode 106, the other with
-zipcode 439.
+example, C<大安區> or C<瑞穗> are short names, while C<臺北市大安區> is a long
+name. Notice there are two C<大安區> in the table, one with zipcode 106, the
+other with zipcode 439.
 
-Spaces needs to be removed in the query, you cannot use C<"竹 北"> to perform
-the query, use C<"竹北"> instead.
+Spaces must be removed in the query, you cannot use C<"竹 北"> to perform the
+query, use C<"竹北"> instead.
 
 If the given C<$query> is an ambiguours short name, C<undef> is returned.
+
+=head1 AUTHOR
+
+Kang-min Liu C<< <gugod@gugod.org> >>
+
+=head1 COPYRIGHT
+
+Copyright (c) 2011 Kang-min Liu C<< <gugod@gugod.org> >>.
+
+=head1 LICENCE
+
+The MIT License
+
+=head1 PROJECT DEVELOPMENT
+
+See L<https://github.com/gugod/Data-Zipcode-TW>
+
+=head1 DISCLAIMER OF WARRANTY
+
+BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
+ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
+YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
+NECESSARY SERVICING, REPAIR, OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE
+LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL,
+OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
+THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
+RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
+FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
+SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+=cut
