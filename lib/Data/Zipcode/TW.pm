@@ -1103,12 +1103,11 @@ my $ZIPCODE = {
 };
 
 sub new {
-    return bless {}, shift;
+    return bless {}, $_[0];
 }
 
 sub get {
-    my ($self, $q) = @_;
-    return $ZIPCODE->{$q};
+    return $ZIPCODE->{$_[1]};
 }
 
 1;
