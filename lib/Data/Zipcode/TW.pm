@@ -1102,6 +1102,10 @@ my $ZIPCODE = {
   807 => '高雄市三民區'
 };
 
+sub new {
+    return bless {}, shift;
+}
+
 sub get {
     my ($self, $q) = @_;
     return $ZIPCODE->{$q};
