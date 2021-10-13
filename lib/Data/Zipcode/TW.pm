@@ -1,7 +1,6 @@
 package Data::Zipcode::TW;
-# ABSTRACT: Taiwan zipcode data in a box.
-
 use strict;
+our $VERSION = "1.0";
 
 ## cd doc; perl twzip.pl
 my $ZIPCODE = {
@@ -1120,7 +1119,7 @@ __END__
 
 =head1 NAME
 
-Data::Zipcode::TW
+Data::Zipcode::TW -- Taiwan zipcode data in a box
 
 =head1 SYNOPSIS
 
@@ -1186,7 +1185,7 @@ Kang-min Liu C<< <gugod@gugod.org> >>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2011 Kang-min Liu C<< <gugod@gugod.org> >>.
+Copyright (c) 2021 Kang-min Liu C<< <gugod@gugod.org> >>.
 
 =head1 LICENCE
 
@@ -1194,7 +1193,7 @@ The MIT License
 
 =head1 PROJECT DEVELOPMENT
 
-See L<https://github.com/gugod/Data-Zipcode-TW>
+See L<https://github.com/perltaiwan/Data-Zipcode-TW>
 
 =head1 DISCLAIMER OF WARRANTY
 

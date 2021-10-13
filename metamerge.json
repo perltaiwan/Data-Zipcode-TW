@@ -1,0 +1,14 @@
+{
+    "name": "Data-Zipcode-TW",
+    "x_static_install": true,
+    "resources": {
+        "bugtracker": {
+            "web": "https://github.com/perltaiwan/Data-Zipcode-TW/issues"
+        },
+        "repository": {
+            "web": "https://github.com/perltaiwan/Data-Zipcode-TW",
+            "url": "https://github.com/perltaiwan/Data-Zipcode-TW.git",
+            "type": "git"
+        }
+    }
+}
