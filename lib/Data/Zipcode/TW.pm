@@ -1146,8 +1146,9 @@ Data::Zipcode::TW
 
 =head1 DESCRIPTION
 
-This module provides Taiwan Zipcode data. The original zip data can be downloaded
-from L<http://www.post.gov.tw/post/internet/down/index.html?ID=190108>.
+This module provides programming interfaces to query Taiwan Zipcode
+data. The original zipcode data can be downloaded from
+L<https://www.post.gov.tw/post/internet/Download/all_list.jsp?ID=2201>
 
 =head1 METHODS
 
@@ -1164,9 +1165,9 @@ zipcode-to-area-name lookup), and returns a long area name. Otherwise it is
 assumed the string means a long or short area name (described below), and returns
 the zipcode number.
 
-Please reference this official table provided by the postal office website at
- L<http://download.post.gov.tw/post/download/臺灣地區郵遞區號前3碼一覽表_9912.txt>
-for the area names that can be used in the query string.
+Please also refer the official table provided by the postal office website at
+L<https://www.post.gov.tw/post/internet/Download/all_list.jsp?ID=2201>,
+from there, you want to download the a CSV file named C<< 3+2碼郵遞區號CSV檔 105/01(UTF－8) >>
 
 Short names are those with zipcode numbers in the table, they are usually town
 names. Long names are short names prepened by their city/county names. For
